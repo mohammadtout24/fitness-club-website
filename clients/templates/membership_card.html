@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Membership Card</title>
+<link rel="stylesheet" href="{% static 'membership-card.css' %}">
+        <!--  section-title Icon  -->
+    <link rel="shortcut icon" href="{% static 'assets/Logo1.png' %}" type="image/x-icon">
+</head>
+<body>
+
+<div class="membership-card">
+  <img src="{% static 'assets/logo1.png' %}" id="logo" style="width:100px ">
+  <h1>Membership Card</h1>
+  <div class="info">
+
+    <p><strong>Name:</strong> {{ member.Mname }}</p>
+    <p><strong>Email:</strong> {{ member.Memail }}</p>
+    <p><strong>Phone:</strong> {{ member.Mphone }}</p>
+    <p><strong>Membership Type:</strong> {{ member.membership_type }}</p>
+  </div>
+</div>
+<div class="buttons">
+  <button onclick="printCard()">Print Card</button>
+  <a href="{% url 'home' %}"><button>Go to Home Page</button></a>
+</div>
+
+<script>
+function printCard() {
+  var printContents = document.querySelector('.membership-card').innerHTML;
+  var originalContents = document.body.innerHTML;
+
+  var printWindow = window.open('', '_blank');
+  printWindow.document.open();
+  printWindow.document.write('<html><head><title>Print Card</title></head><body>' + printContents + '</body></html>');
+  printWindow.document.close();
+
+  printWindow.focus();
+  printWindow.print();
+  printWindow.close();
+}
+</script>
+
+</body>
+</html>

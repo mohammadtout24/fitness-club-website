@@ -1,0 +1,162 @@
+/* Add this CSS to a new file, e.g., client_info.css */
+
+/* Center content in the middle of the screen */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Rest of your existing CSS styles */
+.wrapper {
+    width: 420px;
+    background-color: transparent;
+    color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+}
+
+/* Adjust input box styles, button styles, etc. */
+
+.button-row {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logout-button,
+.go-home-button {
+    text-decoration: none;
+    color: white;
+    background-color: #C2250F;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    display: inline-block; /* Ensure they are on the same line */
+}
+
+.logout-button:hover,
+.go-home-button:hover {
+    background-color: #D85644;
+}
+/* Add this CSS to a new file, e.g., client_info.css */
+
+/* Reset styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply background image and styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('backlogin3.jpg') no-repeat;
+    font-family: 'Alegreya Sans';
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper {
+    width: 420px;
+    background-color: transparent;
+    color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+}
+
+/* Adjust input box styles */
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: calc(98% - 60px);
+    height: calc(90% - 40px);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+    padding: 5px;
+}
+
+i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    font-size: 20px;
+    transform: translateY(-50%);
+}
+
+/* Adjust button styles */
+.button {
+    width: 100%;
+    height: 45px;
+    background: #C2250F;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+}
+
+.signLink {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signLink p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signLink p a:hover {
+    text-decoration: underline;
+}
+
+input[type="submit"]:hover {
+    background-color: #D85644;
+}
+

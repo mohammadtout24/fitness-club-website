@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Swimming Section</title>
+
+    <!--  section-title Icon  -->
+    <link rel="shortcut icon" href="{% static 'assets/Logo1.png' %}" type="image/x-icon">
+
+    <!--  Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!--  Font Awesome Library Link  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!--  Google Fonts Link  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CYanone+Kaffeesatz&display=swap" rel="stylesheet">
+    <!--  Own CSS File  -->
+    <link rel="stylesheet" href="{% static 'swimming.css' %}">
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <div id="navbar-section" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <img src="{% static 'assets/Logo1.png' %}" width="100" height="50" class="d-inline-block align-center" alt="logo">
+                    Swimming Team
+                </a>
+        </div>
+    </div>
+
+    <!-- Head Section -->
+    <header id="head-section">
+        <div id="head-slides" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#head-slides" data-slide-to="0" class="active"></li>
+                <li data-target="#head-slides" data-slide-to="1"></li>
+                <li data-target="#head-slides" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" id="head-slide-1">
+                    <div class="slide-text wow fadeIn" data-wow-delay="0.5s">
+                        <h1 class="text-uppercase wow fadeIn" data-wow-delay="0.75s">Fun and healthy activity</h1>
+                    </div>
+                </div>
+                <div class="carousel-item" id="head-slide-2">
+                    <div class="slide-text wow fadeIn" data-wow-delay="0.5s">
+                        <h1 class="text-uppercase wow fadeIn" data-wow-delay="0.75s">Swimming lessons for adults</h1>
+                    </div>
+                </div>
+                <div class="carousel-item" id="head-slide-3">
+                    <div class="slide-text wow fadeIn" data-wow-delay="0.5s">
+                        <h1 class="text-uppercase wow fadeIn" data-wow-delay="0.75s">Swimming is a skill for life!</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Up Arrow -->
+    <div class="fixed-bottom" style="height:90px;">
+        <a href="#head-section" class="up-arrow">
+            <div class="events-icon arrow-icon">
+                <i class="fas fa-angle-up"></i>
+            </div>
+        </a>
+    </div>
+    <!-- Services Section -->
+    <section id="services-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="left-side col-lg-6">
+                    <div class="img-above-title">
+                        <h2>Services</h2>
+                    </div>
+                </div>
+                <div class="right-side col-lg-6">
+                    <div class="row wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="col-sm-3">
+                            <div class="service-icon-1"></div>
+                        </div>
+                        <div class="col-sm-9">
+                            <a href="#">
+                                <h3 class="text-uppercase">Swim lessons for babies</h3>
+                            </a>
+                            <p> Your babies can start building essential skills such as breath control, buoyancy, and propulsion!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row wow fadeInUp" data-wow-delay="0.65s">
+                        <div class="col-sm-3">
+                            <div class="service-icon-2"></div>
+                        </div>
+                        <div class="col-sm-9">
+                            <a href="#">
+                                <h3 class="text-uppercase">Swim lessons for kids</h3>
+                            </a>
+                            <p>Learning to swim instills confidence in children as they conquer fears and develop new abilities.
+                                 Overcoming challenges in swim lessons helps boost self-esteem!
+                                </p>
+                        </div>
+                    </div>
+                    <div class="row wow fadeInUp" data-wow-delay="0.75s">
+                        <div class="col-sm-3">
+                            <div class="service-icon-3"></div>
+                        </div>
+                        <div class="col-sm-9">
+                            <a href="#">
+                                <h3 class="text-uppercase">Swim lessons for adults</h3>
+                            </a>
+                            <p>  It's never too late to learn how to swim or improve swimming abilities.
+                                 Adults who enroll in swim lessons can develop a valuable life skill!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Instructors Section -->
+    <section id="instructors-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="left-side col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-3 text-center wow fadeIn" data-wow-delay="0.55s">
+                            <img src="{% static 'assets/page-1_img06.jpg' %}" class="img-fluid">
+                            <a href="#">
+                                <h3>Rashid Reef</h3>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-sm-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                            <img src="{% static 'assets/page-1_img07.jpg' %}" class="img-fluid">
+                            <a href="#">
+                                <h3>Leila Lagoon</h3>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-sm-3 text-center wow fadeIn" data-wow-delay="0.85s">
+                            <img src="{% static 'assets/page-1_img08.jpg' %}" class="img-fluid">
+                            <a href="#">
+                                <h3>Farah Fathom</h3>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-sm-3 text-center wow fadeIn" data-wow-delay="1s">
+                            <img src="{% static 'assets/page-1_img06.jpg' %}" class="img-fluid">
+                            <a href="#">
+                                <h3>Amir Al-Nadi</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-side col-lg-6">
+                    <div class="img-above-title">
+                        <h2>Instructors</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Footer Section -->
+    <footer id="footer">
+        <div class="container">
+            <!-- Registration Form Section -->
+            <section id="registration-form-section">
+                <div class="section-title text-center wow fadeIn" data-wow-delay="0.5s">
+                    <h2>Register with us </h2>
+                </div>
+                <form class="section-content" method="post">
+                    {% csrf_token %}
+                    <div class="form-group wow fadeInUpBig" data-wow-delay="0.55s">
+                        <span> Name </span>
+                        <input type="text" name="name" class="text-input" required value="{{ request.session.client_name }}">
+                    </div>
+                    <div class="form-group wow fadeInUpBig" data-wow-delay="0.7s">
+                        <span> Email </span>
+                        <input type="email" name="email" class="text-input" required value="{{ request.session.client_email }}">
+                    </div>
+                    <div class="form-group wow fadeInUpBig" data-wow-delay="0.85s">
+                        <span> Phone number</span>
+                        <input type="text" name="phone" class="text-input" required value="{{ request.session.client_phone }}">
+                    </div>
+                    <div class="form-group wow fadeInUpBig" data-wow-delay="0.85s">
+                        <span> Choose your instructor </span>
+                        <div class="text-input" >
+                        <input type="radio" id="ins1" name="instructor" value="Rashid Reef">
+                        <label for="ins1"> Rashid Reef </label><br>
+                        <input type="radio" id="ins2" name="instructor" value="Leila Lagoon">
+                        <label for="ins2">Leila Lagoon</label><br>
+                        <input type="radio" id="ins3" name="instructor" value="Farah Fathom">
+                        <label for="ins3">Farah Fathom </label><br>
+                        <input type="radio" id="ins4" name="instructor" value="Amir Al-Nadi">
+                        <label for="ins4">Amir Al-Nadi </label><br>
+                    </div> </div>
+                    <div class="form-group wow fadeInUpBig" data-wow-delay="0.85s">
+                        <span>Age Range:</span>
+                        <select id="age-range" name="age-range" class="text-input" required>
+                          <option value="">Select Age Range</option>
+                          <option value="baby">Baby (1-5 years)</option>
+                          <option value="kid">Kid (6-17 years)</option>
+                          <option value="adult">Adult (>17 years)</option>
+                        </select>
+                    </div>
+                    <div class="form-group wow fadeInUpBig" data-wow-delay="0.85s">
+                    <span>Membership Plan:</span>
+                    <select id="membership" name="membership" class="text-input" required>
+                    <option value="monthly">Monthly </option>
+                    <option value="yearly">Yearly </option>
+                    <option value="weekly">Weekly </option>
+                    </select><br><br>
+                    </div>
+                    <div class="form-group wow fadeInUpBig">
+                        <span> Price(in $) </span> 
+                        <input type="number" id="price" name="price" class="text-input" readonly />
+                    </div>
+              
+                    <button class="btn confirm btn-block wow fadeInUpBig" type="button" onclick="calculatePrice()">CALCULATE PRICE</button>
+                    <button type="submit" class="btn confirm btn-block wow fadeInUpBig" onclick="hello()" >RESERVE NOW </button>
+                </form>
+            </section>
+            <div class="copy-right text-center">
+              Copyright © LU students. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!--  All JavaScript Files  -->
+    <div>
+        <!--  jQuery JavaScript  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!--  Bootstrap JavaScrpit -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+        </script>
+        <!--  Own JavaScript File  -->
+        <script src="{% static 'Swimmingjs/script.js' %}"></script>
+    </div>
+</body>
+
+</html>

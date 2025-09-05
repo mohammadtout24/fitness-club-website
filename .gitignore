@@ -1,0 +1,19 @@
+# Python compiled files
+*.pyc
+__pycache__/
+
+# Database
+db.sqlite3
+
+# Environment
+Lib/
+Scripts/
+pyvenv.cfg
+.env
+
+# Editor files
+*.sublime-project
+*.sublime-workspace
+
+# Keep project folders
+# (clients/, I3308/, item_images/, static/, manage.py will be tracked)

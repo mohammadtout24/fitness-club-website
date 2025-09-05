@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'reservation.css' %}" />
+    <title>Registration Page</title>
+        <link rel="shortcut icon" href="{% static 'assets/Logo1.png' %}" type="image/x-icon">
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__left">
+        <div class="image__content">
+          <h2>FITPHYSIQUE </h2>
+          <p class="image__subtitle">START YOUR JOURNEY WITH US NOW</p>
+        </div>
+      </div>
+      <div class="container__right">
+        <form class="content" method="post" id="registration-form1">
+          {% csrf_token %}
+          <span></span>
+          <div class="header">
+            <h1>Registration</h1>
+            <p> CHOOSE YOUR CLASS</p>
+          </div>
+
+          <span>Available classes for kids:</span>
+           <div class="Aclasses_container"> 
+    <div class="photo">
+        <img src="{% static 'assets/kid_ballet.jpg' %}" alt="Ballet">
+        <div class="alt-text">Ballet</div>
+        <input type="radio" name="selectedSport" class="radio-button" value="ballet">
+    </div>
+    <div class="photo">
+        <img src="{% static 'assets/kid_gymnastic.jpg' %}" alt="Gymnastics">
+        <div class="alt-text">Gymnastics</div>
+        <input type="radio" name="selectedSport" class="radio-button" value="gymnastic">
+    </div>
+</div>
+    <span> Choose your plan for this week :</span>
+          <div class="hour">
+            <input type="radio" id="hour1" name="hours" value="1hr">
+            <label for="hour1">1 hour </label><br>
+            <input type="radio" id="hour2" name="hours" value="2hr">
+            <label for="hour2"> 2 hours </label><br> 
+          </div>
+          <span> Choose the day within available hours :  </span>
+          <div class="day-picker">
+  <input type="radio" id="monday" name="day" value="Monday" required>
+  <label for="monday">Monday from 10AM to 4PM </label>
+  <input type="radio" id="tuesday" name="day" value="Tuesday" required>
+  <label for="tuesday">Tuesday from 10AM to 4PM </label>
+  <input type="radio" id="wednesday" name="day" value="Wednesday" required>
+  <label for="wednesday">Wednesday from 12PM to 3PM</label>
+  <input type="radio" id="thursday" name="day" value="Thursday" required>
+  <label for="thursday">Thursday from 12PM to 3PM </label>
+  <input type="radio" id="friday" name="day" value="Friday" required>
+  <label for="friday">Friday from 2PM to 4PM </label>
+</div> 
+<span> Price(in $) </span> 
+<input type="number" id="price" name="price"  readonly />
+   <div class="btns">
+    <button class="btn confirm" type="button" onclick="calculatePrice()">CALCULATE PRICE </button>
+            <button class="btn confirm" type="submit" id="purchaseButton" style="display: none;">RESERVE NOW </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="{% static 'reservation.js' %}"></script>
+  </body>
+</html>

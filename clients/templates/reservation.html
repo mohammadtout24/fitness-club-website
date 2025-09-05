@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'reservation.css' %}" />
+    <title>Reservation Page</title>
+            <!--  section-title Icon  -->
+    <link rel="shortcut icon" href="{% static 'assets/Logo1.png' %}" type="image/x-icon">
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__left">
+        <div class="image__content">
+          <h2>FITPHYSIQUE </h2>
+          <p class="image__subtitle">START YOUR JOURNEY WITH US NOW</p>
+        </div>
+      </div>
+      <div class="container__right">
+        <form class="content" method="post">
+          {% csrf_token %}
+          <span></span>
+          <div class="header">
+            <h1>Registration</h1>
+            <p> CHOOSE YOUR CLASS</p>
+          </div>
+
+          <span>Name</span>
+          <div>
+            <input type="text" placeholder="Username" autocomplete="off" name="name" value="{{ request.session.client_name }}"/>
+          </div>
+          <span>Email</span>
+          <div>
+            <input type="email" placeholder="Email" autocomplete="off" name="email"  value="{{ request.session.client_email }}"/>
+
+          </div>
+
+          <span>Age</span>
+          <div class="age">
+            <input type="radio" id="age1" name="age_range" value="kid">
+            <label for="age1"> 6-17 </label><br>
+            <input type="radio" id="age2" name="age_range" value="adult">
+            <label for="age2">18 or more </label><br> 
+          </div>
+          <div class="btns">
+            <button class="btn confirm" type="submit">CONFIRM</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

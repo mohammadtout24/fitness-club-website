@@ -1,0 +1,461 @@
+/*---------------------- Generic CSS --------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+.navbar-brand {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h2,
+h3 {
+    color: black;
+}
+
+h1 {
+    color: #fff;
+    font-size: 75px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 50px;
+    padding: 50px 0;
+}
+
+h3 {
+    font-size: 30px;
+    transition: .3s all ease;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a h3:hover {
+    color: #dc030a;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    color: #999;
+    line-height: 2;
+}
+.section-content {
+    padding-bottom: 50px;
+}
+.my-arrow {
+    font-size: 30px;
+    border: 3px solid #dc030a;
+    border-radius: 50%;
+    color: #dc030a;
+    transition: .3s all ease;
+
+}
+
+.my-arrow i {
+    margin: 0 10px;
+    transform: rotate(90deg);
+}
+
+.my-arrow:hover {
+    background: #dc030a;
+    color: #fff;
+}
+
+#navbar-section,
+#services-section,
+#instructors-section {
+    border-bottom: 3px solid lightgrey;
+}
+
+/*---------------------- Navbar Section -------------------------------*/
+#navbar-section {
+    background: #fff;
+}
+
+.navbar-brand {
+    color: black !important;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+.navbar .active {
+    border-color: #dc030a;
+    color: #dc030a !important;
+}
+
+/*---------------------- Head Section -------------------------------*/
+#head-section {
+    padding-top: 86px;
+}
+
+.slide-text {
+    background: rgb(244, 244, 244, 0.25);
+    text-align: center;
+    padding-top: 10px;
+    margin: 15% auto;
+}
+
+#head-slide-1,
+#head-slide-2,
+#head-slide-3 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#head-slides .carousel-indicators li {
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    border: 3px solid #fff;
+    opacity: 1;
+    background: transparent;
+}
+
+#head-slides .carousel-indicators .active {
+    background: #fff;
+}
+
+#head-slide-1 {
+    background-image: url("assets/page-1_slide01.jpg");
+}
+
+#head-slide-2 {
+    background-image: url("assets/page-1_slide02.jpg");
+}
+
+#head-slide-3 {
+    background-image: url("assets/page-1_slide03.jpg");
+}
+
+/*----------------------- Up Arrow ----------------------------------*/
+.up-arrow {
+    float: right;
+    margin-bottom: 10%;
+    margin-right: 3%;
+    opacity: 0;
+    transition: .3s all ease;
+}
+
+/*---------------------- Welcome Section ----------------------------*/
+
+
+/*---------------------- Services Section ---------------------------*/
+#services-section .right-side .row {
+    margin: 50px 0;
+}
+
+#services-section .left-side {
+    background-image: url("assets/page-1_img01.jpg");
+}
+
+#services-section .left-side,
+#instructors-section .right-side {
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-size: cover;
+    padding: 0;
+}
+
+.img-above-title {
+    background: rgb(244, 244, 244, 0.85);
+    width: 270px;
+    height: 100px;
+    padding: 25px 0;
+    position: relative;
+    top: 80%;
+    text-align: center;
+}
+
+#services-section .img-above-title {
+    float: right;
+}
+
+.img-above-title h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.service-icon-1,
+.service-icon-2,
+.service-icon-3 {
+    background-image: url("assets/page-1_icons.png");
+    background-repeat: no-repeat;
+    height: 98px;
+    width: 98px;
+    margin: 15px auto;
+    transition: .3s all ease;
+}
+
+.service-icon-2 {
+    background-position-x: -98px;
+}
+
+.service-icon-3 {
+    background-position-x: -196px;
+}
+
+#services-section .right-side .row:hover .service-icon-1,
+#services-section .right-side .row:hover .service-icon-2,
+#services-section .right-side .row:hover .service-icon-3 {
+    background-position-y: -98px;
+}
+
+/*---------------------- Events Section -----------------------------*/
+
+.my-card-header,
+.my-card-body,
+.my-card-footer {
+    width: 255px;
+    margin: auto;
+}
+
+.my-card-header {
+    background: #fff;
+    padding: 5px 10px;
+    transition: .3s all ease;
+}
+
+.my-card-header i,
+.my-card-header span {
+    color: #dc030a;
+}
+
+
+.my-card-header:hover {
+    background: #dc030a;
+    color: #fff;
+    cursor: default;
+}
+
+.my-card-header:hover i,
+.my-card-header:hover span {
+    color: #fff;
+}
+
+#my-card-body-1 {
+    background-image: url("assets/page-1_img02.jpg");
+}
+
+#my-card-body-2 {
+    background-image: url("assets/age-1_img03.jpg");
+}
+
+#my-card-body-3 {
+    background-image: url("assets/page-1_img04.jpg");
+}
+
+#my-card-body-4 {
+    background-image: url("assets/page-1_img05.jpg");
+}
+
+.my-card-body {
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: .3s all ease !important;
+}
+
+.plus-div {
+    background: #dc030a;
+    color: #fff;
+    transition: .3s all ease;
+    height: 100%;
+    padding: 100px 0;
+    opacity: 0;
+}
+
+.plus-div .plus-icon {
+    border: 3px solid #fff;
+    margin: 25% auto;
+}
+
+.my-card-body:hover {
+    background-size: 125%;
+}
+
+.my-card-body:hover .plus-div {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.modal .close {
+    width: 35px;
+    height: 35px;
+    background: #000;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    opacity: 1;
+    padding-bottom: 4px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    left: 97%;
+    bottom: 97%;
+}
+
+.modal-body img {
+    padding: 0 !important;
+}
+
+
+
+.arrow-icon {
+    border: 3px solid #dc030a;
+    color: #dc030a;
+    transition: .3s all ease;
+}
+
+.arrow-icon:hover {
+    background: #dc030a;
+    color: #fff;
+}
+.slide-arrows .col-6:first-child a {
+    float: right;
+}
+
+/*---------------------- Instructors Section ------------------------*/
+#instructors-section .right-side {
+    background-image: url("assets/page-1_img10.jpg");
+    float: left;
+}
+
+#instructors-section .left-side {
+    margin: 80px 0;
+    float: right;
+}
+
+#instructors-section .left-side h3 {
+    font-size: 25px;
+}
+
+#instructors-section .left-side img {
+    border: 3px solid transparent;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+#instructors-section .left-side img:hover {
+    border: 3px solid #dc030a;
+}
+
+/*---------------------- Contacts Section ---------------------------*/
+#registration-form-section form {
+    width: 500px;
+    margin: auto;
+}
+
+.text-input {
+    width: 100%;
+    min-height: 50px;
+    max-height: 200px;
+    padding-left: 15px;
+    background: rgba(255, 255, 255, .2);
+}
+
+#registration-form-section h2,
+.text-input::placeholder,
+.copy-right,
+.copy-right a {
+    color:black;
+}
+
+#registration-form-section .btn {
+    border: 3px solid white;
+    border-radius: 0;
+    height: 50px;
+    background: #dc030a ;
+    color: white;
+}
+
+#registration-form-section .btn:hover {
+    background: #dc030a;
+    color: #fff;
+}
+#registration-form-section span {
+    display: grid;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .btns {
+  display: flex;
+  gap: 1rem;
+}
+.copy-right {
+    padding: 15px;
+}
+
+/*-----------------------------------------------------------------*/
+/*---------------------- Media Queries ----------------------------*/
+@media only screen and (max-width: 992px) {
+
+    #services-section .left-side,
+    #instructors-section .right-side {
+        height: 300px;
+    }
+
+    #services-section .right-side,
+    #instructors-section .left-side {
+        padding: 0 10%;
+    }
+
+    #instructors-section .right-side {
+        order: 1;
+    }
+
+    #instructors-section .left-side {
+        order: 2;
+    }
+
+    .img-above-title {
+        top: 60%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 50px;
+    }
+}
+@media only screen and (max-width: 555px) {
+    h1, h2 {
+        font-size: 35px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 25px;
+    }
+
+    #registration-form-section form {
+        width: 250px;
+        margin: auto;
+    }
+
+    #services-section .img-above-title,
+    #instructors-section .img-above-title {
+        margin: auto;
+        float: none;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .navbar-brand img {
+        width: 70px;
+        height: 40px;
+    }
+}

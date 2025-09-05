@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  {% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'signandlogin.css' %}">
+            <!--  section-title Icon  -->
+    <link rel="shortcut icon" href="{% static 'assets/Logo1.png' %}" type="image/x-icon">
+</head>
+<body>
+    <div class="wrapper">
+    <form id="signupForm" method="post">
+        {% csrf_token %}
+                    <h1> Sign up </h1>
+<div class="input-box"> <input type="text" name="name" required placeholder="Name"> </div>
+<div class="input-box"><input type="email" name="email" required placeholder="Email"> </div>
+<div class="input-box"> <input type="text" name="phone" required placeholder="Phone number"> </div>
+<div class="input-box"><input type="password" name="password" id="password" required placeholder="Password"></div>
+<div class="input-box"><input type="password" name="confirmPassword" id="confirmPassword" required placeholder="Confirm Password"> </div>
+<div class="input-box"> <input type="text" maxlength="1" name="gender" required placeholder="gender (M or F)"> </div>
+<div class="input-box"><input type="date" id="birthday" name="birthday" required></div>
+<input type="submit" name="submit" value="Sign Up" class="button">
+<div class="signLink"><p> Already have an account? <a href="{% url 'login' %}">Login</a></p></div>
+</form> </div>
+<script src="{% static 'signup.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+            <!--  section-title Icon  -->
+    <link rel="shortcut icon" href="{% static 'assets/Logo1.png' %}" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            padding: 20px;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+        }
+        .product-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .product-details {
+            flex-grow: 1;
+        }
+        .product-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .product-info {
+            color: #666;
+        }
+        .total-price {
+            font-weight: bold;
+            color: #333;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-gray-800 py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <a href="/" class="text-white mx-4">Home</a>
+                <a href="/products/" class="text-white mx-4">Product List</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto mt-8">
+        <h1 class="text-3xl font-semibold mb-8">Your Cart</h1>
+        <!-- Cart items -->
+        {% if cart_items %}
+            {% for item in cart_items %}
+                <div class="cart-item">
+                    <img src="{{ item.product.image.url }}" alt="{{ item.product.pname }}" class="product-image">
+                    <!-- Product Details -->
+                    <div class="product-details">
+                        <h3 class="product-name">{{ item.product.pname }}</h3>
+                        <div class="product-info">
+                            <p>Quantity: 
+                                <form action="{% url 'update_cart' item.pk %}" method="post" class="inline">
+                                    {% csrf_token %}
+                                    <input type="number" name="quantity" value="{{ item.quantity }}" min="1" max="{{ item.product.quantity }}" class="w-16 py-1 px-2 border border-gray-300 rounded">
+                                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-2">Update</button>
+                                </form>
+                                <form action="{% url 'remove_from_cart' item.pk %}" method="post" class="inline">
+                                    {% csrf_token %}
+                                    <button type="submit" class="text-red-600 hover:text-red-800 ml-2">Remove</button>
+                                </form>
+                            </p>
+                            <p class="total-price">Total Price: ${{ item.total_price }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <!-- Calculate and display total cart price -->
+            {% with total_price=0 %}
+                {% for item in cart_items %}
+                    {% with item_total=item.total_price %}
+                        {% with total_price as total_price+item_total %}
+                        {% endwith %}
+                    {% endwith %}
+                {% endfor %}
+                <div class="mt-8">
+                    <p class="text-lg font-semibold">Total: ${{ total_cart_price }}</p>
+                    <!-- Add JavaScript confirmation dialog -->
+                    <button onclick="checkout()" class="mt-4 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Proceed to Checkout</button>
+                </div>
+            {% endwith %}
+        {% else %}
+            <!-- Display empty cart message -->
+            <p class="text-gray-600">Your cart is empty. <a href="/products/" class="text-blue-600">Continue shopping</a>.</p>
+        {% endif %}
+    </div>
+
+    <!-- JavaScript for confirmation dialog -->
+    <script>
+        // Function to handle checkout
+        function checkout() {
+            // Show confirmation message
+            var confirmCheckout = confirm("Are you sure you want to proceed with the checkout?");
+    
+            // If user confirms, proceed with checkout
+            if (confirmCheckout) {
+                // Make POST request to checkout endpoint
+                fetch('/checkout/', {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Show success message
+                    alert(data.message);
+                    // Redirect user to home page
+                    window.location.href = '/';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+        }
+    </script>
+    
+</body>
+</html>

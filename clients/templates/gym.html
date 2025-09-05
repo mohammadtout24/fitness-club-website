@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Section</title>
+        <!--  section-title Icon  -->
+    <link rel="shortcut icon" href="{% static 'assets/Logo1.png' %}" type="image/x-icon">
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="{% static 'favicon.svg' %}" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="{% static 'gym.css' %}">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="{% static 'assets/images/hero-banner.png'%}">
+  <link rel="preload" as="image" href="{% static 'assets/images/hero-circle-one.png'%}">
+  <link rel="preload" as="image" href="{% static 'assets/images/hero-circle-two.png'%}">
+  <link rel="preload" as="image" href="{% static 'assets/images/heart-rate.svg'%}">
+  <link rel="preload" as="image" href="{% static 'assets/images/calories.svg'%}">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <ion-icon name="barbell-sharp" aria-hidden="true"></ion-icon>
+
+        <span class="span">Fit physique'Gym</span>
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        
+
+      </nav>
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero bg-dark has-after has-bg-image" id="home" aria-label="hero" data-section>
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">
+              <strong class="strong">Peak Fitness</strong>Destination
+            </p>
+
+            <h1 class="h1 hero-title">Effort Leads to Better Life</h1>
+
+            <p class="section-text">
+              Take the first step towards a healthier, happier you. Register now and let's make progress towards your fitness goals, together..
+            </p>
+
+            <a href="#" class="btn btn-primary">Get Started</a>
+
+          </div>
+
+          <div class="hero-banner">
+
+            <img src="{% static 'assets/images/hero-banner.png' %}" width="660" height="753" alt="hero banner" class="w-100">
+
+            <img src="{% static 'assets/images/hero-circle-one.png' %}" width="666" height="666" aria-hidden="true" alt=""
+              class="circle circle-1">
+            <img src="{% static 'assets/images/hero-circle-two.png' %}" width="666" height="666" aria-hidden="true" alt=""
+              class="circle circle-2">
+
+            <img src="{% static 'assets/images/heart-rate.svg' %}" width="255" height="270" alt="heart rate"
+              class="abs-img abs-img-1">
+            <img src="{% static 'assets/images/calories.svg' %}" width="348" height="224" alt="calories" class="abs-img abs-img-2">
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+
+          <div class="about-banner has-after">
+            <img src="{% static 'assets/images/about-banner.png'%}" width="660" height="648" loading="lazy" alt="about banner"
+              class="w-100">
+
+            <img src="{% static 'assets/images/about-circle-one.png'%}" width="660" height="534" loading="lazy" aria-hidden="true"
+              alt="" class="circle circle-1">
+            <img src="{% static 'assets/images/about-circle-two.png'%}" width="660" height="534" loading="lazy" aria-hidden="true"
+              alt="" class="circle circle-2">
+
+            <img src="{% static 'assets/images/fitness.png'%}" width="650" height="154" loading="lazy" alt="fitness"
+              class="abs-img w-100">
+          </div>
+
+          <div class="about-content">
+
+            <p class="section-subtitle">About Us</p>
+
+            <h2 class="h2 section-title">Welcome To Our Fitness Gym</h2>
+
+            <p class="section-text">
+              At Fit physique'Gym, we believe in the power of fitness to transform lives.
+               Our state-of-the-art facility offers top-of-the-line equipment and expert trainers dedicated to
+                helping you achieve your goals. We pride ourselves on fostering a welcoming and supportive environment
+                 where everyone feels empowered to reach their full potential.
+            </p>
+
+            <p class="section-text">
+              Whether you're a seasoned athlete or new to fitness, we're here to guide and inspire you every step
+               of the way. Join us today and embark on a journey to a stronger, healthier you!"
+            </p>
+
+            <div class="wrapper">
+
+              <div class="about-coach">
+
+                <figure class="coach-avatar">
+                  <img src="{% static 'assets/images/about-coach.jpg'%}" width="65" height="65" loading="lazy" alt="Trainer">
+                </figure>
+
+                <div>
+                  <h3 class="h3 coach-name">nick mitchell</h3>
+
+                  <p class="coach-title">Our Coach</p>
+                </div>
+
+              </div>
+
+              <a href="#" class="btn btn-primary">Explore More</a>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+  
+
+      <!-- 
+        - #CLASS
+      -->
+
+      <section class="section class bg-dark has-bg-image" id="class" aria-label="class">
+        <div class="container">
+
+          <p class="section-subtitle">Our Classes</p>
+
+          <h2 class="h2 section-title text-center">Fitness Classes For Every Goal</h2>
+
+          <ul class="class-list has-scrollbar">
+
+            <li class="scrollbar-item">
+              <div class="class-card">
+
+                <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
+                  <img src="{% static 'assets/images/class-1.jpg'%}" width="416" height="240" loading="lazy" alt="Weight Lifting"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="title-wrapper">
+                    <img src="{% static 'assets/images/class-icon-1.png' %}" width="52" height="52" aria-hidden="true" alt=""
+                      class="title-icon">
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Weight Lifting</a>
+                    </h3>
+                  </div>
+
+                  <p class="card-text">
+                   A foundational aspect of strength training, builds muscle,
+                     increases metabolism, and enhances overall physical performance.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="class-card">
+
+                <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
+                  <img src="{% static 'assets/images/class-2.jpg'%}" width="416" height="240" loading="lazy" alt="Cardio & Strenght"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="title-wrapper">
+                    <img src="{% static 'assets/images/class-icon-2.png'%}" width="52" height="52" aria-hidden="true" alt=""
+                      class="title-icon">
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Cardio & Strenght</a>
+                    </h3>
+                  </div>
+
+                  <p class="card-text">
+                    Combining cardio and strength training in your fitness routine optimizes 
+                    cardiovascular health, promotes muscular strength, and fosters overall well-being.
+                  </p>
+
+            </li>
+            <li class="scrollbar-item">
+              <div class="class-card">
+
+                <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
+                  <img src="{% static 'assets/images/class-3.jpg'%}" width="416" height="240" loading="lazy" alt="Cardio & Strenght"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="title-wrapper">
+                    <img src="{% static 'assets/images/class-icon-3.png'%}" width="52" height="52" aria-hidden="true" alt=""
+                      class="title-icon">
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Stretching Zone</a>
+                    </h3>
+                  </div>
+
+                  <p class="card-text">
+                    The stretching zone provides a dedicated space for members to improve flexibility, 
+                    prevent injury, and enhance overall mobility through targeted stretching exercises.
+                  </p>
+
+            </li>
+
+                  
+            <li class="scrollbar-item">
+              <div class="class-card">
+
+                <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
+                  <img src="{% static 'assets/images/class-4.jpg'%}" width="416" height="240" loading="lazy" alt="The Fitness Pack"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="title-wrapper">
+                    <img src="{% static 'assets/images/class-icon-4.png'%}" width="52" height="52" aria-hidden="true" alt=""
+                      class="title-icon">
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">The Fitness Pack</a>
+                    </h3>
+                  </div>
+
+                  <p class="card-text">
+                    Offers a comprehensive selection of resources and tools to 
+                    support members in achieving their health and wellness goals.
+                  </p>
+
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #BLOG
+      -->
+
+      <section class="section blog" id="blog" aria-label="blog">
+        <div class="container">
+
+          <p class="section-subtitle">Our News</p>
+
+          <h2 class="h2 section-title text-center">Latest Blog Feed</h2>
+
+          <ul class="blog-list has-scrollbar">
+
+            <li class="scrollbar-item">
+              <div class="blog-card">
+
+                <div class="card-banner img-holder" style="--width: 440; --height: 270;">
+                  <img src="{% static 'assets/images/blog-1.jpg'%}" width="440" height="270" loading="lazy"
+                    alt="Going to the gym for the first time" class="img-cover">
+
+                  <time class="card-meta" datetime="2024-05-01">1 May 2024</time>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Going to the gym for the first time</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Stepping into the gym for the first time was nerve-wracking, but the warm welcome
+                     and encouragement from fellow members instantly put me at ease.
+                     It's amazing how quickly the gym became my second home, thanks to the supportive community here at Fit physique'Gym.
+                  </p>
+
+                  <a href="#" class="btn-link has-before">Read More</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="blog-card">
+
+                <div class="card-banner img-holder" style="--width: 440; --height: 270;">
+                  <img src="{% static 'assets/images/blog-2.jpg'%}" width="440" height="270" loading="lazy"
+                    alt="Parturient accumsan cacus pulvinar magna" class="img-cover">
+
+                  <time class="card-meta" datetime="2024-05-01">1 May 2024</time>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Results that appear over time</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Can't believe how much stronger and healthier I feel since joining Fit physique'Gym!
+                    was the best investment in my health and well-being. I'm so grateful for the support of this amazing community                  </p>
+
+                  <a href="#" class="btn-link has-before">Read More</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="blog-card">
+
+                <div class="card-banner img-holder" style="--width: 440; --height: 270;">
+                  <img src="{% static 'assets/images/blog-3.jpg' %}" width="440" height="270" loading="lazy"
+                    alt="Risus purus namien parturient accumsan cacus" class="img-cover">
+
+                  <time class="card-meta" datetime="2024-05-01">1 May 2024</time>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Satisfaction in joining and constant follow-up</a>
+                  </h3>
+
+                  <p class="card-text">
+                    I've never felt stronger or more confident, and I'm grateful for the positive impact Fit physique'Gym has had on my life.
+                     Highly recommend to anyone looking for a gym that truly cares about its members' success!
+                  </p>
+
+                  <a href="#" class="btn-link has-before">Read More</a>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+<!----registration form---->
+
+<div class="register-form"> <!-- Remove the dot from the class attribute -->
+  <h2 class="h2">Become a member of our gym!</h2>
+  <h3>Fill out the form below to complete your registration</h3>
+</div>
+
+  <form action="" method="post">
+    {% csrf_token %}
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required value="{{ request.session.client_name }}"><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required value="{{ request.session.client_email }}"><br><br>
+    
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required value="{{ request.session.client_phone }}"><br><br>
+    
+    <label for="membership">Membership Plan:</label>
+    <select id="membership" name="membership" required>
+        <option value="monthly">Monthly - $50/month</option>
+        <option value="yearly">Yearly - $500/year</option>
+        <option value="weekly">Weekly - $10/day</option>
+    </select><br><br>
+    
+    <input type="checkbox" id="terms" name="terms" required>
+    <label for="terms">I agree to the terms and conditions.</label><br><br>
+    
+    <button type="submit">Register</button>
+</form>
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="section footer-top bg-dark has-bg-image" id="ft">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <ion-icon name="barbell-sharp" aria-hidden="true"></ion-icon>
+
+            <span class="span">Fit physique'Gym</span>
+          </a>
+
+          <div class="wrapper">
+
+            <img src="{% static 'assets/images/footer-clock.png' %}" width="34" height="34" loading="lazy" alt="Clock">
+
+            <ul class="footer-brand-list">
+
+              <li>
+                <p class="footer-brand-title">Monday - Friday</p>
+
+                <p>7:00Am - 10:00Pm</p>
+              </li>
+
+              <li>
+                <p class="footer-brand-title">Saturday - Sunday</p>
+
+                <p>7:00Am - 2:00Pm</p>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title has-before">Our Links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Classes</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Blog</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title has-before">Contact Us</p>
+          </li>
+
+          <li class="footer-list-item">
+            <div class="icon">
+              <ion-icon name="location" aria-hidden="true"></ion-icon>
+            </div>
+
+            <address class="address footer-link">
+            <a href="https://maps.google.com/maps?q=Tripoli%20Dahr%20el%20Ein">
+                Tripoli Dahr el Ein
+              </a>
+            </address>
+          </li>
+
+          <li class="footer-list-item">
+            <div class="icon">
+              <ion-icon name="call" aria-hidden="true"></ion-icon>
+            </div>
+
+            <div>
+              <a href="tel:18001213637" class="footer-link">+961 112233</a>
+            </div>
+          </li>
+
+          <li class="footer-list-item">
+            <div class="icon">
+              <ion-icon name="mail" aria-hidden="true"></ion-icon>
+            </div>
+
+            <div>
+              <a href="mailto:LUstudents@gmail.com" class="footer-link">LUstudents@gmail.com</a>
+
+              <a href="mailto:services@Fitphysique.com" class="footer-link">services@Fitphysique.com</a>
+            </div>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title has-before">Our Newsletter</p>
+          </li>
+
+          <li>
+            <form action="" class="footer-form">
+              <input type="email" name="email_address" aria-label="email" placeholder="Email Address" required
+                class="input-field">
+
+              <button type="submit" class="btn btn-primary" aria-label="Submit">
+                <ion-icon name="chevron-forward-sharp" aria-hidden="true"></ion-icon>
+              </button>
+            </form>
+          </li>
+
+          <li>
+            <ul class="social-list">
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+         Copyright © LU students. All rights reserved.
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up-sharp" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="{% static 'gym.js' %}" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

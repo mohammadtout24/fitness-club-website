@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Membership Purchase</title>
+<link rel="stylesheet" type="text/css" href="{% static 'membership.css' %}">
+        <!--  section-title Icon  -->
+    <link rel="shortcut icon" href="{% static 'assets/Logo1.png' %}" type="image/x-icon">
+</head>
+<body>
+
+<div class="container">
+  <h2>Membership Purchase</h2>
+  <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="Mname" required value="{{ request.session.client_name }}">
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="Memail" required value=" {{ request.session.client_email }}">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="Mphone" required value="{{ request.session.client_phone }}">
+    </div>
+    <div class="form-group">
+      <label for="membership_type">Membership Type:</label>
+      <select id="membership_type" name="membership_type" required>
+        <option value="standard">Standard - $30</option>
+        <option value="professional">Professional - $45</option>
+        <option value="ultimate">Ultimate - $60</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="payment_method">Payment Method:</label>
+      <input type="radio" id="Cash" name="payment_method" value="Cash" required>
+      <label for="Cash">Cash</label>
+    </div>
+    <button type="submit">Buy Now</button>
+  </form>
+</div>
+
+</body>
+</html>
